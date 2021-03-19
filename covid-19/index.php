@@ -262,24 +262,52 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 col-12">
-					<form action="phpfile.php" method="post">
+					<form action="phpfile.php" method="POST">
 						<div class="form-group">
     						<label>Username</label>
-   							<input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off" required>
+   							<input type="text" class="form-control" name="username" placeholder="Name" value="" required>
   						</div>
   						<div class="form-group">
     						<label for="exampleFormControlInput1">Email</label>
-   							<input type="email" class="form-control" name="email" placeholder="name@example.com" autocomplete="off">
-  						</div>
-  						<div class="form-group">
-    						<label>Mobile</label>
-   							<input type="number" class="form-control" name="mobile" placeholder="Mobile" autocomplete="off" required>
+   							<input type="email" class="form-control" name="email" placeholder="name@example.com" required>
   						</div>
   						<div class="form-group mt-4">
-   							 <label for="exampleFormControlTextarea1">Any Symptoms You Have & Message</label>
-   							 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg"></textarea>
+    						<label>Mobile</label>
+   							<input type="number" class="form-control" name="mobile" placeholder="Mobile" required>
+  						</div>
+
+  							<div class="form-group">
+  							  	<label>Select Symptoms</label><br>
+  							 </div>
+							   <div class="form-group row ml-1 mt-2">
+
+							      <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+							        <input type="checkbox" class="custom-control-input" name="covid[]" id="customCheck1" value="cold" checked>
+							        <label class="custom-control-label" for="customCheck1">Cold</label>
+							      </div>
+							      
+							      <div class="custom-control custom-checkbox">
+							        <input type="checkbox" class="custom-control-input" name="covid[]" id="customCheck2" value="fever">
+							        <label class="custom-control-label ml-4" for="customCheck2">Fever</label>
+							      </div>
+							    
+							      <div class="custom-control custom-checkbox">
+							        <input type="checkbox" class="custom-control-input" name="covid[]" id="customCheck3" value="cough">
+							        <label class="custom-control-label ml-4" for="customCheck3">Cough</label>
+							      </div>
+
+							      <div class="custom-control custom-checkbox">
+							        <input type="checkbox" class="custom-control-input" name="covid[]" id="customCheck4" value="difficultybreathing">
+							        <label class="custom-control-label ml-4" for="customCheck4">Difficulty Breathing</label>
+							      </div>
+							    </div>
+							 
+  						<div class="form-group mt-4">
+   							 <label for="exampleFormControlTextarea1"> Message</label>
+   							<textarea type="text" class="form-control" name="message" placeholder="Message" required></textarea>
   						</div>
   						<button type="submit" class="btn btn-primary mb-2" name="submit" style="background-color: #ff0011; border: 1px #ff0011;">Submit</button>
+
 					</form>
 				</div>
 			</div>
@@ -381,7 +409,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://github.com/borgekiran/">Borgekiran</a></p>
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="https://github.com/borgekiran/">Borgekiran</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
